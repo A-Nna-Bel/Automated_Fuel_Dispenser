@@ -1,6 +1,17 @@
 try:
+   
     def main():
 
+            name = input('Enter your name:')
+            if name.isalpha():
+                print(f'Welcome {name}')
+            elif name.isdigit():
+                print('Please enter your name in letters')
+                exit()
+            elif name.isalnum():
+                print('Please enter your name in letters only!')
+                exit()
+            
             fulltankCapacity = 0
 
             #Price of fuels
@@ -60,7 +71,7 @@ try:
                     print('Fuel Choice:' + output)
                     print(f'Quantity:  {quantity}  Litres')
                     print(f'Total Cost: {cost} Naira')
-                    print('Thanks for your patronage ')
+                    print(f'Thanks for your patronage {name}')
                     return main()
                 kok()
             except Exception as e:
